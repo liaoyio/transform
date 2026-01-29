@@ -99,6 +99,7 @@ export default function JsonToMetafield() {
       transformer={transformer}
       editorTitle="JSON"
       editorLanguage="json"
+      editorDefaultValue="metafieldsJson"
       resultTitle="Metafields JSON"
       resultLanguage="json"
       editorSettingsElement={getSettingsElement}

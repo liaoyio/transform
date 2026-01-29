@@ -12,7 +12,7 @@ export const categorizedRoutes = [
         desc: "Converts JSON to Metafields."
       },
       {
-        label: "JSON 转义成字符串",
+        label: "JSON 转字符串",
         path: "/json-escape",
         desc:
           "Escapes or unescapes a JSON string removing traces of offending characters that could prevent parsing."

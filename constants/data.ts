@@ -1,3 +1,455 @@
+export const metafields = {
+  milestone: {
+    title: "Milestone perks",
+    img:
+      "https://i.shgcdn.com/e5fcfe2d-e5fd-4d83-b6d0-d6312a8c6f2b/-/format/auto/-/quality/normal/",
+    tip:
+      '<p style="text-align: center;"><span style="color: rgb(170, 165, 165);">*Milestone event lasts for one month, ending on December 10<br></span><span style="color: rgb(163, 162, 162);">&nbsp;<a style="color: rgb(163, 162, 162);" href="https://nuphy.com/pages/node-75-milestone-terms-conditions" target="_blank" rel="noopener" class="js-no-transition">Terms &amp; Conditions</a></span></p>',
+    endTime: "2026-01-10T00:00:00Z"
+  },
+  withText: {
+    container: {
+      className: "bg-[#f2f2f2] pt-2 md:px-0 px-4"
+    },
+    contentStyles: {
+      className: "max-w-[1080px] rounded-t-3xl bg-white md:px-12 px-4 py-4"
+    },
+    title: "Choose the Node 75 that fits you best",
+    titleStyles: {
+      className: "text-[40px] md:text-[56px] font-bold py-2.5"
+    },
+    descStyles: {
+      style: { fontSize: "20px", color: "#000" }
+    },
+
+    desc:
+      "<span style=\"font-family: 'Roboto Condensed'; font-weight: 400;\">With a <strong>13.8mm front height</strong>, the low-profile version offers <strong>lighter weight and better portability</strong>, while the <strong>standard-height switches</strong> deliver <strong>a more solid and satisfying typing feel</strong>.</span>"
+  },
+  colorList: {
+    container: {
+      className: "bg-[#f2f2f2] md:px-0 px-4"
+    },
+    contentStyles: {
+      className:
+        "max-w-[1080px] mx-auto bg-white my-0 rounded-none md:px-12 px-4"
+    },
+    col: 3,
+    h5Col: 1,
+    itemTitleStyles: {
+      className: "text-center"
+    },
+    list: [
+      {
+        image: "https://i.shgcdn.com/f678098c-85bd-4d88-bce1-c5c2f451009b/",
+        title: "Lunar White"
+      },
+      {
+        image: "https://i.shgcdn.com/4ee91cdf-105c-4cc8-b95e-580e65a6afd1/",
+        title: "Light Pink"
+      },
+      {
+        image: "https://i.shgcdn.com/99d3635f-c4f9-4cb9-ace8-8ae09a031489/",
+        title: "Ink Gray"
+      }
+    ]
+  },
+  bentoGrids: {
+    container: {
+      className: "bg-[#f2f2f2] md:px-0 px-4 "
+    },
+    contentStyles: {
+      className:
+        "max-w-[1080px] bg-white mx-auto md:px-12 px-4 my-0 rounded-none md:py-12 py-8"
+    },
+    col: 2,
+    h5Col: 1,
+    list: [
+      {
+        image:
+          "https://i.shgcdn.com/3155747e-2e97-4821-ac7c-21ca3729b248/-/format/auto/-/quality/best/",
+        alt: "Normal Profile"
+      },
+      {
+        image:
+          "https://i.shgcdn.com/288f5ab9-d1d4-4fb0-9290-6ac44d7eab4a/-/format/auto/-/quality/best/",
+        alt: "Low-Profile"
+      }
+    ]
+  },
+  parameter: {
+    title: "Switches",
+    list: [
+      {
+        heading: "High-Profile",
+        list: [
+          {
+            image:
+              "https://i.shgcdn.com/564550a0-10c6-4b46-a5a8-0385637115c0/-/format/auto/-/quality/normal/-/resize/720x/",
+            alt: "Red Max 45gf Linear Switch"
+          },
+          {
+            image:
+              "https://i.shgcdn.com/c2c4f8fe-ea37-471b-b65f-b690d053d829/-/format/auto/-/quality/normal/-/resize/720x/",
+            alt: "Blush Max 42gf Linear Switch"
+          },
+          {
+            image:
+              "https://i.shgcdn.com/775cf593-48b5-46f3-b1ed-c883852a18d2/-/format/auto/-/quality/normal/-/resize/720x/",
+            alt: "Brown Max 50gf Linear Switch"
+          }
+        ]
+      },
+      {
+        heading: "Low-Profile",
+        list: [
+          {
+            image:
+              "https://i.shgcdn.com/c5fbf788-b499-471f-9a32-c10ac8c0ef2c/-/format/auto/-/quality/normal/-/resize/720x/",
+            alt: "Red Nano 45gf Linear Switch"
+          },
+          {
+            image:
+              "https://i.shgcdn.com/8b1f2519-e405-40c1-a0ff-d13f76a26050/-/format/auto/-/quality/normal/-/resize/720x/",
+            alt: "Blush Nano 42gf Linear Switch"
+          },
+          {
+            image:
+              "https://i.shgcdn.com/e03a3e33-23c9-46a0-a428-860d1362857a/-/format/auto/-/quality/normal/-/resize/720x/",
+            alt: "Brown Nano 50gf Linear Switch"
+          }
+        ]
+      }
+    ]
+  },
+  download: {
+    title: "Downloads",
+    subTitle: "Node75's 3D printing model file",
+    list: [
+      {
+        title: "Pen Dock",
+        link:
+          "https://cdn.shopify.com/s/files/1/0268/7297/1373/files/Node_-_-110325.stp?v=1762779543"
+      },
+      {
+        title: "Bar Tray",
+        link:
+          "https://cdn.shopify.com/s/files/1/0268/7297/1373/files/Node_-_-110325_eafa0f42-b75a-4a64-bc3e-48c57d1731ce.stp?v=1762779679"
+      },
+      {
+        title: "Phone Stand",
+        link:
+          "https://cdn.shopify.com/s/files/1/0268/7297/1373/files/Node_-_-110325_c3ebb78f-f1e4-4750-a2f3-e8981a930f36.stp?v=1762779798"
+      },
+      {
+        title: "Display Dock",
+        link:
+          "https://cdn.shopify.com/s/files/1/0268/7297/1373/files/Node_-_-110325_0a276b31-d40f-4035-bd1f-96a0268ade25.stp?v=1762779839"
+      },
+      {
+        title: "Brick Mount",
+        link:
+          "https://cdn.shopify.com/s/files/1/0268/7297/1373/files/Node_-_-110325_d7d9bc7c-6099-4099-aa29-559d998ddefb.stp?v=1762779873"
+      },
+      {
+        title: "Cap Mount",
+        link:
+          "https://cdn.shopify.com/s/files/1/0268/7297/1373/files/Node_-_-110325_0c001f8d-bab6-448d-a59b-370f9678ae23.stp?v=1762779917"
+      },
+      {
+        title: "Card Rest",
+        link:
+          "https://cdn.shopify.com/s/files/1/0268/7297/1373/files/Node_-_-110325_72d60195-e716-404b-ade0-efd1123bde1a.stp?v=1762779976"
+      }
+    ]
+  },
+  inTheBox: {
+    title: "IN THE BOX",
+    subTitle: "What’s in the box?",
+    list: [
+      {
+        title: "PRE-BUILT KEYBOARD",
+        desc: [
+          "1 x Node75 High-Profile Keyboard",
+          "1 x 2.4G Receiver",
+          "1 x USB-C to USB-C Cable",
+          "1 x USB-C to USB-A adapter",
+          "1 x Keycap/Switch Puller",
+          "3 x Extra Keycaps",
+          "3 x Dotted Keycaps",
+          '1 x Quick Start Guide (with FAQ & Instructions) — <a href="https://cdn.shopify.com/s/files/1/0268/7297/1373/files/NuPhy_Node_75-HP_250918.pdf?v=1762759924" target="_blank" rel="noopener noreferrer">Download</a>'
+        ],
+        images: [
+          "https://i.shgcdn.com/2db5174f-836f-43b6-8763-e50ec1ed908f/-/format/auto/-/quality/best/-/resize/1048x/",
+          "https://i.shgcdn.com/18d1f536-9954-4eaf-a14f-e3657e3a901e/-/format/auto/-/quality/best/-/resize/1048x/",
+          "https://i.shgcdn.com/4b0ff8b4-bd11-4d75-93c8-74298930012f/-/format/auto/-/quality/best/-/resize/1048x/"
+        ]
+      },
+      {
+        title: "PRE-BUILT KEYBOARD",
+        desc: [
+          "1 x Node75 Low-Profile Keyboard",
+          "1 x 2.4G Receiver",
+          "1 x USB-C to USB-C Cable",
+          "1 x USB-C to USB-A adapter",
+          "1 x Keycap/Switch Puller",
+          "3 x Extra Keycaps",
+          "3 x Dotted Keycaps",
+          '1 x Quick Start Guide (with FAQ & Instructions) — <a href="https://cdn.shopify.com/s/files/1/0268/7297/1373/files/NuPhy_Node_75-LP_250918.pdf?v=1762764779" target="_blank" rel="noopener noreferrer">Download</a>'
+        ],
+        images: [
+          "https://i.shgcdn.com/18d1f536-9954-4eaf-a14f-e3657e3a901e/-/format/auto/-/quality/best/-/resize/1048x/",
+          "https://i.shgcdn.com/4b0ff8b4-bd11-4d75-93c8-74298930012f/-/format/auto/-/quality/best/-/resize/1048x/",
+          "https://i.shgcdn.com/2db5174f-836f-43b6-8763-e50ec1ed908f/-/format/auto/-/quality/best/-/resize/1048x/"
+        ]
+      }
+    ]
+  },
+  techSpecs: {
+    title: "Tech Specs",
+    subTitle: "Tech Specs",
+    tips:
+      "* Note: 1. Due to technical limitations, renderings of keyboards published by NuPhy are not accurate representations of the final products.",
+    list: [
+      {
+        image:
+          "https://i.shgcdn.com/7f06f0d7-d9c2-47b8-b06a-7acd0443a93e/-/format/auto/-/quality/normal/-/resize/2048x/",
+        leftColumn: [
+          {
+            label: "SPECIFICATION",
+            values: [
+              "Layout: ANSI 75%",
+              "Number of Keys: 82",
+              "Switch Type: High-profile",
+              "Stabilizer Type: Plate Mounted",
+              "Mount Type: Gasket",
+              "Hot-swappable Support: Yes",
+              "N-key Rollover Support: Yes",
+              "Backlight: North-facing RGB-LED",
+              "Backlight Modes: 20",
+              "Compatible System: macOS/Windows/Android/iOS",
+              "Operating Environment: -10 to 50℃"
+            ]
+          },
+          {
+            label: "CONNECTION",
+            values: [
+              "Mode: 2.4GHz, Wired (USB-C) or Bluetooth 5.0",
+              "2.4GHz Polling Rate: 1000Hz",
+              "Wired Polling Rate: 1000Hz",
+              "Bluetooth 5.0 Polling Rate: 125Hz"
+            ]
+          }
+        ],
+        rightColumn: [
+          {
+            label: "MATERIALS",
+            values: [
+              "Top Case: ABS",
+              "Bottom Case: ABS",
+              "Plate Material: PC",
+              "Keycap: Double-shot mSA"
+            ]
+          },
+          {
+            label: "SIZE AND WEIGHT",
+            values: [
+              "318.1 mm x 141.5 mm x 18.9 mm",
+              "(12.5 inches x 4.5 inches x 0.72 inches)",
+              "827 grams (1.82 pound)",
+              "Type Angle 6º/9º/12º"
+            ]
+          },
+          {
+            label: "POWER AND BATTERY",
+            values: [
+              "Battery Capacity: 4000mAh",
+              "Working Time (all lights on): 60~100 hours (lab test result)",
+              "Working Time (all lights off): Up to 1000 hours (lab test result)"
+            ]
+          }
+        ]
+      },
+      {
+        image:
+          "https://i.shgcdn.com/1df1f88c-ffa5-4c9c-b33b-82b7a32e8a7b/-/format/auto/-/quality/normal/-/resize/1200x/",
+        leftColumn: [
+          {
+            label: "SPECIFICATION",
+            values: [
+              "Layout: ANSI 75%",
+              "Number of Keys: 84",
+              "Switch Type: Low-Profile",
+              "Stabilizer Type: Plate Mounted",
+              "Mount Type: Gasket",
+              "Hot-swappable Support: Yes",
+              "N-key Rollover Support: Yes",
+              "Backlight: North-facing RGB-LED",
+              "Backlight Modes: 20",
+              "Compatible System: macOS/Windows/Android/iOS",
+              "Operating Environment: -10 to 50℃"
+            ]
+          },
+          {
+            label: "CONNECTION",
+            values: [
+              "Mode: 2.4GHz, Wired (USB-C) or Bluetooth 5.0",
+              "2.4GHz Polling Rate: 1000Hz",
+              "Wired Polling Rate: 1000Hz",
+              "Bluetooth 5.0 Polling Rate: 125Hz"
+            ]
+          }
+        ],
+        rightColumn: [
+          {
+            label: "MATERIALS",
+            values: [
+              "Top Case: ABS",
+              "Bottom Case: ABS",
+              "Plate Material: PC",
+              "Keycap: Double-shot nSA"
+            ]
+          },
+          {
+            label: "SIZE AND WEIGHT",
+            values: [
+              "317.1 mm x 137.1 mm x 14 mm",
+              "(12.48 inches x 5.39 inches x 0.5 inches)",
+              "659 grams (1.45 pound)",
+              "Type Angle 4º/8º/11º"
+            ]
+          },
+          {
+            label: "POWER AND BATTERY",
+            values: [
+              "Battery Capacity: 3000mAh",
+              "Working Time (all lights on): 60~100 hours (lab test result)",
+              "Working Time (all lights off): Up to 1000 hours (lab test result)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  fullScreenImage: {
+    container: {
+      className: "bg-[#f2f2f2] md:py-16 py-0"
+    },
+    title: "Winners of the Share Event",
+    img:
+      "https://i.shgcdn.com/4f1ebd8c-c2e4-4824-8671-ebbf1376fec3/-/format/auto/-/quality/best/-/resize/1920x/"
+  },
+  faqs: {
+    container: {
+      className: "px-4 md:pb-12 pb-4 md:px-0 bg-[#f2f2f2]"
+    },
+    contentStyles: {
+      className:
+        "bg-white rounded-3xl md:px-12 px-4 py-8 max-w-[1080px] mx-auto"
+    },
+    title: "Frequently Asked Questions",
+    questions: [
+      {
+        question:
+          " 1. When will I receive my $10 coupon after paying the deposit? ",
+        answer:
+          "The event will launch on November 10th at 9:00-10:00 AM ET. You will receive an email with your coupon on the launch day."
+      },
+      {
+        question:
+          " 2. Do I need to participate in the event after paying the deposit? Will there be a section on the page where I can provide links to my shared posts? Will I receive a $20 coupon instead of the $10 coupon on 11/10 if I'm eligible?",
+        answer:
+          "Yes, there will be a questionnaire to record your shared post link. You will be screened before the launch and receive the upgraded $20 coupon if eligible on 11/10.\nYou can only receive one coupon per person; coupons cannot be combined.\nCoupons will be sent in batches on the launch day, with upgraded customers receiving $20 and others receiving $10."
+      },
+      {
+        question:
+          '  3. Are there any restrictions for "old users"? Do I just need to own a NuPhy keyboard, or do I need to have made a purchase through the official website (providing the order number)? ',
+        answer:
+          "You do not need to purchase through the official website. If you have bought a NuPhy keyboard through other channels, you can still share your experience on Meta, Instagram, X, Discord, or Reddit.\nFor identification: the questionnaire will ask for the order number (if available) or a photo if the order number is not provided.\n"
+      },
+      {
+        question:
+          " 4. Do I just need to register an account to participate? Could there be issues with bulk registration using robot emails to rank in the top 15? How will this affect the event? ",
+        answer:
+          "We will monitor the data for any abnormalities and address them during the event."
+      },
+      {
+        question:
+          " 5. Do I need to purchase a keyboard to participate, or is account registration enough? Will there be a section to view my ranking? Will rankings be displayed in real-time or only after the event ends on 11/10?  ",
+        answer:
+          "The leaderboard event has no purchase requirement. You can participate by simply sharing your link.\nReal-time rankings will be available, and the final rankings will be published on the product page after the event begins."
+      },
+      {
+        question:
+          " 6. Will the coupons for rankings 15-115 be sent on 11/10? Can these coupons be combined with the $10 and $20 coupons? ",
+        answer:
+          "Coupons for rankings 15-115 will be sent on the same day, but they cannot be combined with the $10 or $20 coupons."
+      },
+      {
+        question:
+          " 7. Will prizes be sent together if I purchase a keyboard? If I rank in the top 15 but don’t buy a keyboard, will my prize be sent separately? ",
+        answer:
+          "All prizes from the leaderboard event will be sent separately from the keyboard orders."
+      },
+      {
+        question:
+          " 8. Will there be real-time progress updates? Does the total sales include both high and low-profile keyboards? ",
+        answer:
+          "Real-time progress updates will not be available; however, we will provide daily updates on the overview page after the event launches on 11/10.\nTotal sales will include both high-profile and low-profile Node keyboards."
+      },
+      {
+        question:
+          " 9. Will the first 1200 keyboards be shipped for free after the official launch on 11/10? Is there a time limit for free shipping? ",
+        answer:
+          "Yes, the first 1200 keyboards will be shipped for free on a first-come, first-served basis. Accessories are not included in the free shipping offer.\nThis offer is valid until December 10th."
+      },
+      {
+        question:
+          " 10. Are accessories shipped for free after the official launch on 11/10? ",
+        answer:
+          "Accessories are not shipped for free but will be available at a discount."
+      },
+      {
+        question:
+          " 11. Will all 3000 keyboards shipped come with a mystery box? If I buy two keyboards, will I receive two mystery boxes? ",
+        answer:
+          "Yes, all 3000 keyboards will come with a mystery box. You will receive one mystery box per order, even if you purchase multiple keyboards."
+      },
+      {
+        question:
+          " 12. Will the mystery boxes be sent separately if the 3000 sales target is reached after some customers have already received their keyboards? ",
+        answer:
+          "Mystery boxes will be sent with the Node keyboard orders. The first 3000 mystery boxes will be included in the orders to avoid duplicate shipments."
+      },
+      {
+        question:
+          ' 13. How will the "Free Order" prize be awarded when the total sales reach 5000 units? ',
+        answer:
+          "Winners will be selected through a lottery, and their orders will be fully refunded."
+      },
+      {
+        question:
+          ' 14. Should the statement in the third clause, "During the deposit stage, I cannot cancel the order, and the deposit is non-refundable," be updated? ',
+        answer:
+          "Orders can be canceled, and the deposit will be refunded after the deposit stage ends and the final payment stage begins."
+      },
+      {
+        question:
+          ' 15. Does the statement "Any stage cancellations will void the $10-$20 discount and all other promotions" contradict the above clause? ',
+        answer:
+          "The refund information should follow the rule from clause 14, allowing for cancellation with a refund of the deposit."
+      },
+      {
+        question:
+          " 16. Can I change my shipping or billing address after making the final payment if I have moved? ",
+        answer:
+          "Yes, you can change your address after the final payment if necessary."
+      }
+    ]
+  }
+};
+
+export const metafieldsJson = JSON.stringify(metafields, null, 2);
+
 export const json = JSON.stringify(
   {
     userId: 1,
