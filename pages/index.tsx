@@ -41,12 +41,21 @@ export function generateMetafieldsJson(
   const namespace = options.namespace ?? "component";
   const type = options.type ?? "json";
 
-  return Object.entries(data).map(([key, val]) => ({
+  const result = Object.entries(data).map(([key, val]) => ({
     namespace,
     key,
     type,
     value: typeof val === "string" ? val : JSON.stringify(val)
   }));
+
+  const _order = {
+    namespace,
+    key: "_order",
+    type,
+    value: JSON.stringify(Object.keys(data).map(key => key))
+  };
+  result.push(_order);
+  return result;
 }
 
 export default function JsonToMetafield() {
