@@ -26,10 +26,6 @@ export default class MyDocument extends Document<DocumentProps> {
       <Html>
         <Head>
           <meta charSet="utf-8" />
-          <meta
-            name="google-site-verification"
-            content="bjJSOEahdert-7mwVScrwTTUVR3nSe0bEj5YjevUNn0"
-          />
           <style dangerouslySetInnerHTML={{ __html: css }} />
         </Head>
 

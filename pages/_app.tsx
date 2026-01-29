@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import { Button, IconButton, Pane, Tooltip } from "evergreen-ui";
+import { Pane } from "evergreen-ui";
 import Navigator from "@components/Navigator";
 import "@styles/main.css";
 
 import NProgress from "nprogress";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { activeRouteData } from "@utils/routes";
-import Head from "next/head";
+
 import { Meta } from "@components/Meta";
 import { useDarkMode } from "@hooks/useDarkMode";
 
@@ -70,7 +70,7 @@ export default function App(props) {
       {router.pathname === "/" || !router.pathname ? (
         <Meta
           title={"Transform"}
-          url={`https://transform.tools${router.pathname}`}
+          url={`https://1-tools.vercel.app${router.pathname}`}
           description={
             "A polyglot web converter that's going to save you a lot of time."
           }
@@ -78,7 +78,7 @@ export default function App(props) {
       ) : (
         <Meta
           title={activeRoute?.searchTerm}
-          url={`https://transform.tools${router.pathname}`}
+          url={`https://1-tools.vercel.app${router.pathname}`}
           description={activeRoute?.desc}
         />
       )}

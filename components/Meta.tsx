@@ -10,13 +10,13 @@ export const Meta = ({ title, description, url }) => {
       <meta name="og:url" content={url} />
       <meta name="og:title" content={title} />
       <meta name="og:description" content={description} />
-      <meta name="og:image" content={"https://transform.tools/cover.png"} />
+      <meta name="og:image" content={"https://1-tools.vercel.app/cover.png"} />
       <meta name="og:type" content="website" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
-        content={"https://transform.tools/cover.png"}
+        content={"https://1-tools.vercel.app/cover.png"}
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="ritz078" />
