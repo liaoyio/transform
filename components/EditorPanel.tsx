@@ -241,20 +241,6 @@ export default function EditorPanel({
           </Tooltip>
         )}
 
-        {packageDetails && (
-          <a
-            href={packageDetails.url}
-            style={{
-              display: "inline-flex"
-            }}
-            target="_blank"
-          >
-            <Tooltip content={packageDetails.name}>
-              <Npm />
-            </Tooltip>
-          </a>
-        )}
-
         {hasCopy && (
           <Button
             appearance="primary"

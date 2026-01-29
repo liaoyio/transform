@@ -62,17 +62,14 @@ const Form = <T extends object>({
                   else if (type === InputType.SELECT)
                     select = (
                       <Select
-                        value={props.values[key]}
-                        onChange={props.handleChange}
+                        value={props.values[key] || options[0].value}
+                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                          props.setFieldValue(key, e.target.value);
+                        }}
                         name={key}
-                        defaultValue={options[0].value}
                       >
                         {options.map(({ label, value }) => (
-                          <option
-                            key={value}
-                            value={value}
-                            selected={props.values[key] === value}
-                          >
+                          <option key={value} value={value}>
                             {label}
                           </option>
                         ))}

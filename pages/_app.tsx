@@ -94,42 +94,6 @@ export default function App(props) {
         <Pane flex={1} display="flex" paddingX={20} className="logo-transform">
           {logo}
         </Pane>
-        <Pane display="flex" alignItems={"center"}>
-          <Tooltip content="Toggle dark mode">
-            <IconButton
-              height={20}
-              marginRight={10}
-              icon="moon"
-              onClick={toggleDarkMode}
-            />
-          </Tooltip>
-        </Pane>
-        <Pane display="flex" alignItems={"center"}>
-          <a
-            style={{
-              display: "inline-block",
-              height: 20
-            }}
-            href="https://github.com/ritz078/transform"
-          >
-            <img
-              src="https://img.shields.io/github/stars/ritz078/transform?style=social"
-              alt=""
-            />
-          </a>
-
-          <a href="https://github.com/ritz078/transform" target="_blank">
-            <Button
-              appearance="minimal"
-              height={40}
-              css={{
-                color: "#fff !important"
-              }}
-            >
-              GitHub
-            </Button>
-          </a>
-        </Pane>
       </Pane>
 
       <Pane
