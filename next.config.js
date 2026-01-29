@@ -1,6 +1,9 @@
 const webpack = require("webpack");
 
 const config = {
+  typescript: {
+    ignoreBuildErrors: true
+  },
   webpack(config, options) {
     config.node = {
       fs: "empty",

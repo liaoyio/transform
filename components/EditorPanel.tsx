@@ -58,7 +58,7 @@ export default function EditorPanel({
   defaultValue,
   onChange,
   id,
-  packageDetails
+  packageDetails: _packageDetails
 }: EditorPanelProps) {
   const [showSettingsDialogue, setSettingsDialog] = useState(false);
   const [value, setValue] = useState(defaultValue);
