@@ -1,56 +1,112 @@
+import ConversionPanel from "@components/ConversionPanel";
+import { EditorPanelProps } from "@components/EditorPanel";
+import Form, { InputType } from "@components/Form";
+import { useSettings } from "@hooks/useSettings";
 import * as React from "react";
-import { SvgConverter } from "@components/SvgConverter";
-import { useState } from "react";
-import { defaultSettings, formFields } from "@constants/svgoConfig";
 import { useCallback } from "react";
-import { Transformer } from "@components/ConversionPanel";
-import isSvg from "is-svg";
-import { getWorker } from "@utils/workerWrapper";
-import SvgrWorker from "@workers/svgr.worker";
-import SvgoWorker from "@workers/svgo.worker";
 
-let prettier, svgo, svgr;
-export default function Index() {
-  const name = "SVG to JSX";
-  const [settings, setSettings] = useState(defaultSettings);
-  const [optimizedValue, setOptimizedValue] = useState("");
+interface Metafield {
+  namespace: string;
+  key: string;
+  type: string;
+  value: string;
+}
 
-  const transformer = useCallback<Transformer>(
-    async ({ value }) => {
-      if (!isSvg(value)) throw new Error("This is not a valid svg code.");
+interface Settings {
+  namespace: string;
+  metafieldType: string;
+}
 
-      svgr = svgr || getWorker(SvgrWorker);
-      svgo = svgo || getWorker(SvgoWorker);
+const formFields = [
+  {
+    type: InputType.TEXT_INPUT,
+    key: "namespace",
+    label: "Namespace"
+  },
+  {
+    type: InputType.TEXT_INPUT,
+    key: "metafieldType",
+    label: "Metafield Type"
+  }
+];
 
-      let _value = value;
+export function generateMetafieldsJson(
+  data: Record<string, unknown>,
+  options: { namespace?: string; type?: string } = {}
+): Metafield[] {
+  if (!data || typeof data !== "object" || Array.isArray(data)) {
+    return [];
+  }
 
-      if (settings.optimizeSvg) {
-        _value = await svgo.send({
-          value,
-          settings
+  const namespace = options.namespace ?? "component";
+  const type = options.type ?? "json";
+
+  return Object.entries(data).map(([key, val]) => ({
+    namespace,
+    key,
+    type,
+    value: typeof val === "string" ? val : JSON.stringify(val)
+  }));
+}
+
+export default function JsonToMetafield() {
+  const name = "JSON to Metafields";
+
+  const [settings, setSettings] = useSettings(name, {
+    namespace: "component",
+    metafieldType: "json"
+  });
+
+  const transformer = useCallback(
+    async ({ value }: { value: string }) => {
+      const trimmed = value.trim();
+      if (!trimmed) return "";
+
+      try {
+        const data = JSON.parse(trimmed);
+        const result = generateMetafieldsJson(data, {
+          namespace: settings.namespace,
+          type: settings.metafieldType
         });
+        return JSON.stringify(result, null, 2);
+      } catch (e) {
+        throw new Error(
+          e instanceof SyntaxError
+            ? "Invalid JSON. Please check your input."
+            : (e as Error).message
+        );
       }
-
-      setOptimizedValue(_value);
-
-      _value = await svgr.send({
-        value: _value
-      });
-
-      return _value;
     },
     [settings]
   );
 
+  const getSettingsElement = useCallback<EditorPanelProps["settingElement"]>(
+    ({ open, toggle }) => (
+      <Form<Settings>
+        title={name}
+        onSubmit={setSettings}
+        open={open}
+        toggle={toggle}
+        formsFields={formFields}
+        initialValues={settings}
+      />
+    ),
+    [settings]
+  );
+
   return (
-    <SvgConverter
+    <ConversionPanel
       transformer={transformer}
-      formFields={formFields(defaultSettings)}
-      setSettings={setSettings}
-      optimizedValue={optimizedValue}
+      editorTitle="JSON"
+      editorLanguage="json"
+      editorDefaultValue="metafieldsJson"
+      resultTitle="Metafields JSON"
+      resultLanguage="json"
+      editorSettingsElement={getSettingsElement}
       settings={settings}
-      name={name}
-      resultTitle={"JSX"}
+      resultEditorProps={{
+        hasPrettier: false
+      }}
     />
   );
 }

@@ -8,7 +8,7 @@ export const categorizedRoutes = [
     content: [
       {
         label: "JSON 转 Metafields",
-        path: "/json-to-metafield",
+        path: "/",
         desc: "Converts JSON to Metafields."
       },
       {
@@ -48,7 +48,7 @@ export const categorizedRoutes = [
     content: [
       {
         label: "SVG 转 JSX",
-        path: "/",
+        path: "/svg-to-jsx",
         packageName: "@svgr/core",
         packageUrl: "https://github.com/smooth-code/svgr",
         title: "Transform | A polyglot web converter."
