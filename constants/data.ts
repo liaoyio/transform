@@ -567,6 +567,7 @@ export const css2 = `.alert {
 
 export const css3 = `:root {
   --some-color: #090909;
+  border-radius: 20px;
 }
 
 .foo {
@@ -807,6 +808,8 @@ type ChatMessage @entity {
   content: String! @column
   author: User! @link
 }`;
+
+export const jsonStringToJson = `{\\n  \\"userId\\": 1,\\n  \\"id\\": 1,\\n  \\"title\\": \\"delectus aut autem\\",\\n  \\"completed\\": false\\n}`;
 
 export const jsObject = `{
 	title: {

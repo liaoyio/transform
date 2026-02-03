@@ -18,6 +18,12 @@ export const categorizedRoutes = [
           "Escapes or unescapes a JSON string removing traces of offending characters that could prevent parsing."
       },
       {
+        label: "JSON 字符串转 JSON",
+        path: "/json-string-to-json",
+        desc:
+          'Unescapes a JSON string (e.g. \\n → newline, \\" → quote) for parsing.'
+      },
+      {
         label: "JSON 转 TypeScript",
         path: "/json-to-typescript",
         packageUrl: "https://www.npmjs.com/package/json_typegen_wasm",
@@ -63,6 +69,10 @@ export const categorizedRoutes = [
   {
     category: "CSS",
     content: [
+      {
+        label: "CSS 转 字符串",
+        path: "/css-to-string"
+      },
       {
         label: "CSS 转 JS 对象",
         path: "/css-to-js",
