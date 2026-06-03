@@ -5,8 +5,18 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import SearchBox from "@components/Searchbox";
 
+function normalizePath(path?: string) {
+  if (!path) return "/";
+
+  const pathname = path.split("#")[0].split("?")[0];
+  if (!pathname || pathname === "/") return "/";
+
+  return pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+}
+
 export default function Navigator() {
   const router = useRouter();
+  const activePath = normalizePath(router.asPath || router.pathname);
 
   return (
     <Pane
@@ -38,10 +48,12 @@ export default function Navigator() {
                 </Heading>
               </Pane>
 
-              {(route.content as Route[])
-                .sort((a, b) => a.label.localeCompare(b.label))
+              {[...(route.content as Route[])]
+                .sort((a, b) =>
+                  a.label === b.label ? 0 : a.label > b.label ? 1 : -1
+                )
                 .map((a: Route) => {
-                  const isActive = router.pathname === a.path;
+                  const isActive = activePath === normalizePath(a.path);
                   return (
                     <Link key={a.label} href={a.path} prefetch={false}>
                       <a

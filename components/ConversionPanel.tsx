@@ -11,11 +11,7 @@ import { getWorker } from "@utils/workerWrapper";
 let prettierWorker;
 
 function getEditorLanguage(lang: Language) {
-  const mapping = {
-    flow: "typescript"
-  };
-
-  return mapping[lang] || lang;
+  return lang;
 }
 
 export type Transformer = (args: {
